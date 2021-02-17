@@ -1,44 +1,6 @@
-GoOutWithDuck (For Hong Kong Users)
-===================================
+本軟件只作學術研究測試用途，並非設計作公開展示、使用或作任何實際有關紀錄到訪場所功能。
+This software is not designed to be used in public or any actual usage of location checkout.
 
-Record your visit history using Hong Kong Government "LeaveHomeSafe" QR Codes
-
-It has the following features:
-* Open source. No privacy concerns.
-* Scans "LeaveHomeSafe" QR Code to record visits. Supports auto checkout
-* Allows check in of multiple venues at the same time (e.g. restaurant inside shopping malls)
-* Allows saving of bookmark and pinning of bookmark for frequently visited venues
-* Allows viewing / editing / deleting of visit history
-* Easy removal of wrong check-ins
-
-Work in progress
-* Manual entry of license no. of taxi and other public transports
-* Download confirmed case and issue notifications
-* Set retention period for records
-* Export of history to sharing (e.g. via Email) if needed
-
-Important Notice
-================
-This software is not in any way endorsed by nor affiliated with the Government of the HKSAR. It is not the official contact tracing app.  DO NOT use this software as a subsitute when there is a mandatory legal requirement to use the official tracing app.  The author takes no responsibility and legal liability for any misuse of this software.
-
-出 duck 嚟行（為香港用戶而設）
-=========================
-
-利用政府 “安心出行” 二維碼，記錄您的到訪歷史。（為香港用戶而設）
-
-它具有以下功能：
-* 開源程式。沒有隱私問題。
-* 掃描 “安心出行” 二維碼以記錄到訪歷史，支援自動離開
-* 允許同時進入多個場所（例如，商場內的餐廳）
-* 經常訪問的場所，可以設定及保存書籤，並可將常用書籤置頂
-* 允許查看/編輯/刪除訪問歷史記錄
-* 進入錯誤可即時清除
-
-正在開發：
-* 手動輸入的士和其他公共交通工具車牌
-* 下載已確診個案及發出通知
-* 設置記錄保留期限
-* 如果需要，可將到訪歷史記錄導出及分享（例如電子郵件）
 
 重要通知
 ========
