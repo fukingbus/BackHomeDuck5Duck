@@ -64,17 +64,20 @@ class ScanCodeUseCase @Inject constructor(private val visitHistoryRepository: Vi
                     .onSuccess {
                         visitHistory ->
                             Timber.d("onSuccess")
-                            visitHistoryRepository.insertVisitHistory(visitHistory)
-                                    .onSuccess {
-                                        if (it == -1L) {
-                                            emit(Err(ALREADY_CHECKED_IN))
-                                        } else {
-                                            emit(Ok(visitHistory.apply { id = it.toInt() }))  // Set the saved id
-                                        }
-                                    }
-                                    .onFailure {
-                                        emit(Err("Failure writing record: " + it.message))
-                                    }
+//                            visitHistoryRepository.insertVisitHistory(visitHistory)
+//                                    .onSuccess {
+//                                        if (it == -1L) {
+//                                            emit(Err(ALREADY_CHECKED_IN))
+//                                        } else {
+//                                            emit(Ok(visitHistory.apply { id = it.toInt() }))  // Set the saved id
+//                                        }
+//                                    }
+//                                    .onFailure {
+//                                        emit(Err("Failure writing record: " + it.message))
+//                                    }
+
+                        visitHistoryRepository.insertBookmark(visitHistory.venueInfo)
+                        emit(Ok(visitHistory))
                     }
                     .onFailure {
                         emit(Err(it))
@@ -108,13 +111,11 @@ class ScanCodeUseCase @Inject constructor(private val visitHistoryRepository: Vi
                     Err("Invalid code, mismatch hash")
                 } else {
                     Timber.d("Decode success: $decodedJson")
-                    val now = Calendar.getInstance()
                     Ok(
                             VisitHistory(
                                     venueInfo = VenueInfo(codeContent.nameEn, codeContent.nameZh, null, codeContent.type, venueId),
                                     meta = Json.encodeToString(codeContent.metadata),
-                                    scanType = CITIZEN_CHECK_IN,
-                                    startDate = now
+                                    scanType = CITIZEN_CHECK_IN
                             )
                     )
                 }

@@ -137,13 +137,12 @@ class MainFragment : Fragment() {
         bookmarkAdapter = BookmarkAdapter(
                 getTouchListenerForBookmark(binding.fragmentMainBookmark.bookmarkList)
         )
-
-        val notificationAdapter = NotificationAdapter()
+        
         val config = ConcatAdapter.Config.Builder().setIsolateViewTypes(false).build()
-        val concatAdapter = ConcatAdapter(config, notificationAdapter, bookmarkAdapter)
+        val concatAdapter = ConcatAdapter(config, bookmarkAdapter)
         binding.fragmentMainBookmark.bookmarkList.adapter = concatAdapter
         // subscribe bookmarkAdapter to list
-        updateData(bookmarkAdapter!!, notificationAdapter)
+        updateData(bookmarkAdapter!!)
 
         binding.fragmentMainAppBar.homeButtonLocation.setOnClickListener {
             navigateToLocationScanPage()
@@ -378,7 +377,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun updateData(adapter: BookmarkAdapter, notificationAdapter: NotificationAdapter) {
+    private fun updateData(adapter: BookmarkAdapter) {
         // Make sure we cancel the previous job before creating a new one
         searchBookmarkJob?.cancel()
         searchBookmarkJob = lifecycleScope.launch {
@@ -388,15 +387,6 @@ class MainFragment : Fragment() {
                     }
             }.collect {
                 adapter.submitData(it)
-            }
-        }
-
-        updateNotificationJob?.cancel()
-        updateNotificationJob = lifecycleScope.launch {
-            combine(viewModel.lastUpdate, viewModel.unreadCount) { lastUpdate, unreadCount ->
-                BookmarkUiModel.NotificationItem(lastUpdate, unreadCount)
-            }.collect {
-                notificationAdapter.submitList(listOf(it))
             }
         }
     }

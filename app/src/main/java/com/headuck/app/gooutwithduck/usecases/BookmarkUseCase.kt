@@ -51,24 +51,12 @@ class BookmarkUseCase @Inject constructor(private val visitHistoryRepository: Vi
         retrieveBookmark(visitHistoryId)
                     .onSuccess { bookmark ->
                         val bookmarkVenueInfo = bookmark.venueInfo
-                        val now = Calendar.getInstance()
                         val visitHistory = VisitHistory(
                                 venueInfo = VenueInfo(bookmarkVenueInfo.nameEn, bookmarkVenueInfo.nameZh, null, bookmarkVenueInfo.type, bookmarkVenueInfo.venueId),
                                 meta = Json.encodeToString(bookmark.meta),
-                                scanType = CITIZEN_CHECK_IN,
-                                startDate = now
+                                scanType = CITIZEN_CHECK_IN
                         )
-                        visitHistoryRepository.insertVisitHistory(visitHistory)
-                        .onSuccess {
-                            if (it == -1L) {
-                                emit(Err(ALREADY_CHECKED_IN))
-                            } else {
-                                emit(Ok(visitHistory.apply { id = it.toInt() }))  // Set the saved id
-                            }
-                        }
-                        .onFailure {
-                            emit(Err("Failure writing record: " + it.message))
-                        }
+                        emit(Ok(visitHistory))
                     }
                     .onFailure {
                         emit(Err(it.localizedMessage))

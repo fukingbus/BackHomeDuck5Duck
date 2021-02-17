@@ -74,6 +74,7 @@ class ScanDoneFragment : Fragment() {
         bottomNavSharedViewModel.setBottomNavHidden(true)
 
         binding.venueVisitInfo = venueVisitInfoArgs.venueVisitInfo
+
         binding.callback = object: Callback {
             override fun onDismiss(view: View) {
                 this@ScanDoneFragment.navigateUpSafe()
@@ -81,25 +82,26 @@ class ScanDoneFragment : Fragment() {
 
             override fun onLeaveButtonClick(view: View) {
                 Timber.d("Leave requested")
-                viewModel.leaveVenueNow(venueVisitInfoArgs.venueVisitInfo.id).observe(viewLifecycleOwner){ result ->
-                    Timber.d("Leave result received")
-                    result.onFailure {
-                        Snackbar.make(binding.root, it.message.toString(), Snackbar.LENGTH_LONG)
-                                .setDuration(SNACK_DURATION)
-                                .addCallback(
-                                        object : Snackbar.Callback() {
-                                            override fun onDismissed(snackbar: Snackbar, event: Int) {
-                                                super.onDismissed(snackbar, event)
-                                                this@ScanDoneFragment.navigateUpSafe()
-                                            }
-                                        }
-                                )
-                                .show()
-                    }.onSuccess {
-                        this@ScanDoneFragment.navigateUpSafe()
-                    }
-
-                }
+//                viewModel.leaveVenueNow(venueVisitInfoArgs.venueVisitInfo.id).observe(viewLifecycleOwner){ result ->
+//                    Timber.d("Leave result received")
+//                    result.onFailure {
+//                        Snackbar.make(binding.root, it.message.toString(), Snackbar.LENGTH_LONG)
+//                                .setDuration(SNACK_DURATION)
+//                                .addCallback(
+//                                        object : Snackbar.Callback() {
+//                                            override fun onDismissed(snackbar: Snackbar, event: Int) {
+//                                                super.onDismissed(snackbar, event)
+//                                                this@ScanDoneFragment.navigateUpSafe()
+//                                            }
+//                                        }
+//                                )
+//                                .show()
+//                    }.onSuccess {
+//                        this@ScanDoneFragment.navigateUpSafe()
+//                    }
+//
+//                }
+                this@ScanDoneFragment.navigateUpSafe()
             }
         }
 
