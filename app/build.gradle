@@ -164,7 +164,6 @@ dependencies {
     implementation "androidx.multidex:multidex:$rootProject.multidex_version"
     implementation "com.google.protobuf:protobuf-javalite:3.14.0"
     implementation "at.favre.lib:hkdf:1.1.0"
-    implementation project(":snap-time-picker")
     // Testing dependencies
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$rootProject.hiltVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"

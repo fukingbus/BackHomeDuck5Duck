@@ -28,9 +28,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
-import com.akexorcist.snaptimepicker.SnapTimePickerDialog
-import com.akexorcist.snaptimepicker.TimeValue
-import com.akexorcist.snaptimepicker.extension.SnapTimePickerUtil
 import com.github.michaelbull.result.onFailure
 import com.github.michaelbull.result.onSuccess
 import com.google.android.material.snackbar.Snackbar
@@ -94,22 +91,22 @@ class VenueDetailFragment : Fragment() {
             }
 
         }
-        viewModel.getVenue().observe(
-                viewLifecycleOwner,
-                { result ->
-                    result.onSuccess {
-                        binding.visitHistory = it
-                    }.onFailure {
-                        Snackbar.make(binding.root, it.message.toString(), Snackbar.LENGTH_LONG)
-                                .show()
-                    }
-
-                }
-        )
-
-        SnapTimePickerUtil.observe(this) { selectedHour: Int, selectedMinute: Int ->
-            onTimePicked(selectedHour, selectedMinute)
-        }
+//        viewModel.getVenue().observe(
+//                viewLifecycleOwner,
+//                { result ->
+//                    result.onSuccess {
+//                        binding.visitHistory = it
+//                    }.onFailure {
+//                        Snackbar.make(binding.root, it.message.toString(), Snackbar.LENGTH_LONG)
+//                                .show()
+//                    }
+//
+//                }
+//        )
+//
+//        SnapTimePickerUtil.observe(this) { selectedHour: Int, selectedMinute: Int ->
+//            onTimePicked(selectedHour, selectedMinute)
+//        }
 
         binding.venueDetailToolbar.inflateMenu(R.menu.menu_venue_detail)
         binding.venueDetailToolbar.setOnMenuItemClickListener { item ->
@@ -131,17 +128,17 @@ class VenueDetailFragment : Fragment() {
 
 
     private fun showTimePickerDialog(time: Calendar, isEntryTime: Boolean) {
-        SnapTimePickerDialog.Builder().apply {
-            setPreselectedTime(TimeValue(time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE)))
-            setThemeColor(R.color.app_theme_primary)
-            setTitle(if (isEntryTime) R.string.details_entry_time else R.string.details_exit_time)
-            useViewModel()
-        }.build().show(childFragmentManager, SnapTimePickerDialog.TAG)
-        viewModel.lastDialog = if (isEntryTime) {
-            VenueDetailViewModel.ENTRY_TIME
-        } else {
-            VenueDetailViewModel.EXIT_TIME
-        }
+//        SnapTimePickerDialog.Builder().apply {
+//            setPreselectedTime(TimeValue(time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE)))
+//            setThemeColor(R.color.app_theme_primary)
+//            setTitle(if (isEntryTime) R.string.details_entry_time else R.string.details_exit_time)
+//            useViewModel()
+//        }.build().show(childFragmentManager, SnapTimePickerDialog.TAG)
+//        viewModel.lastDialog = if (isEntryTime) {
+//            VenueDetailViewModel.ENTRY_TIME
+//        } else {
+//            VenueDetailViewModel.EXIT_TIME
+//        }
     }
 
     private fun onTimePicked(hour: Int, minute: Int) {
