@@ -45,13 +45,13 @@ android {
         dataBinding = true
     }
     defaultConfig {
-        applicationId "com.headuck.app.gooutwithduck"
+        applicationId "com.bus.app.backhomeduck5duck"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         multiDexEnabled true
-        testInstrumentationRunner "com.headuck.app.gooutwithduck.utilities.MainTestRunner"
+        testInstrumentationRunner "com.bus.app.backhomeduck5duck.utilities.MainTestRunner"
         versionCode 101
-        versionName "0.1.1"
+        versionName "1.0"
         vectorDrawables.useSupportLibrary true
 
         javaCompileOptions {

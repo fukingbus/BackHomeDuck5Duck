@@ -56,7 +56,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/zxing_barcode_surface"/>
 
-            <com.headuck.app.gooutwithduck.views.AppViewFinderView
+            <com.bus.app.backhomeduck5duck.views.AppViewFinderView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/zxing_viewfinder_view"/>

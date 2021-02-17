@@ -25,14 +25,14 @@
     <data>
        <!-- <variable name="localeUtilCompanion"
             type="gooutwithduckduck.utilities.LocaleUtil.Companion"/>-->
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <import type="android.view.View"/>
         <variable
             name="displayLang"
             type="String" />
         <variable
             name="checkInHeaderItem"
-            type="com.headuck.app.gooutwithduck.data.CheckInUiModel.CheckInHeaderItem"/>
+            type="com.bus.app.backhomeduck5duck.data.CheckInUiModel.CheckInHeaderItem"/>
     </data>
 
 

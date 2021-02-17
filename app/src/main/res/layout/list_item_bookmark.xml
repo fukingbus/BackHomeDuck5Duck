@@ -25,7 +25,7 @@
     <data>
        <!-- <variable name="localeUtilCompanion"
             type="gooutwithduckduck.utilities.LocaleUtil.Companion"/>-->
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <variable
             name="clickListener"
             type="android.view.View.OnClickListener"/>
@@ -34,7 +34,7 @@
             type="String"/>
         <variable
             name="bookmarkItem"
-            type="com.headuck.app.gooutwithduck.data.BookmarkUiModel.BookmarkItem"/>
+            type="com.bus.app.backhomeduck5duck.data.BookmarkUiModel.BookmarkItem"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         >
 
-    <com.headuck.app.gooutwithduck.views.MaskedCardView
+    <com.bus.app.backhomeduck5duck.views.MaskedCardView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="@id/bookmark_item_foreground"
@@ -113,7 +113,7 @@
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
-    </com.headuck.app.gooutwithduck.views.MaskedCardView>
+    </com.bus.app.backhomeduck5duck.views.MaskedCardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/bookmark_item_foreground"

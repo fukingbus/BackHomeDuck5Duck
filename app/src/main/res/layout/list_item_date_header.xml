@@ -23,13 +23,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <variable
             name="displayLang"
             type="String"/>
         <variable
             name="dateHeader"
-            type="com.headuck.app.gooutwithduck.data.VisitHistoryUiModel.DateHeaderItem"/>
+            type="com.bus.app.backhomeduck5duck.data.VisitHistoryUiModel.DateHeaderItem"/>
     </data>
 
     <LinearLayout

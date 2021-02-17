@@ -35,7 +35,7 @@
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:context="com.headuck.app.gooutwithduck.HomeActivity"
+        tools:context="com.bus.app.backhomeduck5duck.HomeActivity"
         tools:listitem="@layout/list_item_bookmark"/>
 
 </layout>

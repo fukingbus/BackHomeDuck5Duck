@@ -66,7 +66,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
 
-        <com.headuck.app.gooutwithduck.views.BottomNavigationViewCust
+        <com.bus.app.backhomeduck5duck.views.BottomNavigationViewCust
             android:id="@+id/home_pager_bottom_navigation"
             style="@style/Widget.MaterialComponents.BottomNavigationView"
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
             app:itemHorizontalTranslationEnabled="false"
             app:labelVisibilityMode="labeled">
 
-        </com.headuck.app.gooutwithduck.views.BottomNavigationViewCust>
+        </com.bus.app.backhomeduck5duck.views.BottomNavigationViewCust>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

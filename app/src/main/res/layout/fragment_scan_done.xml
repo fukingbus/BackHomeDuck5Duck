@@ -24,9 +24,9 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <import type="android.view.View"/>
-        <variable name="venueVisitInfo" type="com.headuck.app.gooutwithduck.data.VenueVisitInfo" />
+        <variable name="venueVisitInfo" type="com.bus.app.backhomeduck5duck.data.VenueVisitInfo" />
         <variable name="callback"
-            type="com.headuck.app.gooutwithduck.ScanDoneFragment.Callback" />
+            type="com.bus.app.backhomeduck5duck.ScanDoneFragment.Callback" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

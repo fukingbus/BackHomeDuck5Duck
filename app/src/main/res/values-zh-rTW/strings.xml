@@ -19,8 +19,8 @@
   -->
 
 <resources>
-    <string name="app_name">出 duck 嚟行</string>
-    <string name="app_short_name">出🦆嚟行</string>
+    <string name="app_name">開心回家</string>
+    <string name="app_short_name">開心回家</string>
 
     <string name="menu_home">主頁</string>
     <string name="menu_email">通知</string>

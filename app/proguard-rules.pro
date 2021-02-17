@@ -47,11 +47,11 @@
     kotlinx.serialization.KSerializer serializer(...);
 }
 
-# Change here com.headuck.app.gooutwithduck
--keep,includedescriptorclasses class com.headuck.app.gooutwithduck.**$$serializer { *; }
--keepclassmembers class com.headuck.app.gooutwithduck.** {
+# Change here com.bus.app.backhomeduck5duck
+-keep,includedescriptorclasses class com.bus.app.backhomeduck5duck.**$$serializer { *; }
+-keepclassmembers class com.bus.app.backhomeduck5duck.** {
     *** Companion;
 }
--keepclasseswithmembers class com.headuck.app.gooutwithduck.** {
+-keepclasseswithmembers class com.bus.app.backhomeduck5duck.** {
     kotlinx.serialization.KSerializer serializer(...);
 }

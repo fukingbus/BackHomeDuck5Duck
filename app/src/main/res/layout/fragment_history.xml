@@ -52,7 +52,7 @@
             android:paddingTop="@dimen/header_margin"
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:context="com.headuck.app.gooutwithduck.HomeActivity"
+            tools:context="com.bus.app.backhomeduck5duck.HomeActivity"
             tools:listitem="@layout/list_item_history"/>
 
     </LinearLayout>

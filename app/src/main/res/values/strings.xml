@@ -21,8 +21,8 @@
 <resources>
 
     <!-- Resources that do not require translation -->
-    <string name="app_name">GoOutWithDuck</string>
-    <string name="app_short_name">GoOutWithDuck</string>
+    <string name="app_name">開心回家</string>
+    <string name="app_short_name">開心回家</string>
 
     <!-- Translatable resources -->
 

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.headuck.app.gooutwithduck.proto";
+option java_package = "com.bus.app.backhomeduck5duck.proto";
 option java_multiple_files = true;
 
 message UserPreferences {

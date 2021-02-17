@@ -24,10 +24,10 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <import type="android.view.View"/>
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <variable
             name="visitHistory"
-            type="com.headuck.app.gooutwithduck.data.VisitHistory"
+            type="com.bus.app.backhomeduck5duck.data.VisitHistory"
         />
         <variable
             name="displayLang"
@@ -35,7 +35,7 @@
         />
         <variable
             name="callback"
-            type="com.headuck.app.gooutwithduck.VenueDetailFragment.Callback"
+            type="com.bus.app.backhomeduck5duck.VenueDetailFragment.Callback"
         />
     </data>
 

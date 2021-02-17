@@ -23,7 +23,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <variable
             name="clickListener"
             type="android.view.View.OnClickListener"/>
@@ -32,7 +32,7 @@
             type="String"/>
         <variable
             name="visitHistory"
-            type="com.headuck.app.gooutwithduck.data.VisitHistoryUiModel.VisitHistoryItem"/>
+            type="com.bus.app.backhomeduck5duck.data.VisitHistoryUiModel.VisitHistoryItem"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/card_bottom_margin">
 
-    <com.headuck.app.gooutwithduck.views.MaskedCardView
+    <com.bus.app.backhomeduck5duck.views.MaskedCardView
 
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -113,7 +113,7 @@
             </LinearLayout>
         </RelativeLayout>
         </LinearLayout>
-    </com.headuck.app.gooutwithduck.views.MaskedCardView>
+    </com.bus.app.backhomeduck5duck.views.MaskedCardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/history_item_foreground"

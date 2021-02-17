@@ -26,7 +26,7 @@
     tools:ignore="InvalidNavigation">
     <fragment
         android:id="@+id/scanCodeFragment"
-        android:name="com.headuck.app.gooutwithduck.ScanCodeFragment"
+        android:name="com.bus.app.backhomeduck5duck.ScanCodeFragment"
         android:label="fragment_scan_code"
         tools:layout="@layout/fragment_scan_code" >
         <action
@@ -38,13 +38,13 @@
             app:popUpToInclusive="false">
             <argument
                 android:name="venueVisitInfo"
-                app:argType="com.headuck.app.gooutwithduck.data.VenueVisitInfo" />
+                app:argType="com.bus.app.backhomeduck5duck.data.VenueVisitInfo" />
         </action>
     </fragment>
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.headuck.app.gooutwithduck.HistoryListFragment"
+        android:name="com.bus.app.backhomeduck5duck.HistoryListFragment"
         android:label="HistoryListFragment"
         tools:layout="@layout/fragment_history">
 
@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.headuck.app.gooutwithduck.MainFragment"
+        android:name="com.bus.app.backhomeduck5duck.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -67,7 +67,7 @@
             app:exitAnim="@anim/fragment_close_exit">
             <argument
                 android:name="venueVisitInfo"
-                app:argType="com.headuck.app.gooutwithduck.data.VenueVisitInfo" />
+                app:argType="com.bus.app.backhomeduck5duck.data.VenueVisitInfo" />
         </action>
         <action
             android:id="@+id/action_mainFragment_to_venueDetailFragment"
@@ -76,16 +76,16 @@
     </fragment>
     <fragment
         android:id="@+id/scanDoneFragment"
-        android:name="com.headuck.app.gooutwithduck.ScanDoneFragment"
+        android:name="com.bus.app.backhomeduck5duck.ScanDoneFragment"
         android:label="ScanDoneFragment"
         tools:layout="@layout/fragment_scan_done">
         <argument
             android:name="venueVisitInfo"
-            app:argType="com.headuck.app.gooutwithduck.data.VenueVisitInfo" />
+            app:argType="com.bus.app.backhomeduck5duck.data.VenueVisitInfo" />
     </fragment>
     <fragment
         android:id="@+id/venueDetailFragment"
-        android:name="com.headuck.app.gooutwithduck.VenueDetailFragment"
+        android:name="com.bus.app.backhomeduck5duck.VenueDetailFragment"
         android:label="VenueDetailFragment"
         tools:layout="@layout/fragment_venue_detail">
         <argument

@@ -25,7 +25,7 @@
     <data>
        <!-- <variable name="localeUtilCompanion"
             type="gooutwithduckduck.utilities.LocaleUtil.Companion"/>-->
-        <import type="com.headuck.app.gooutwithduck.utilities.LocaleUtil" />
+        <import type="com.bus.app.backhomeduck5duck.utilities.LocaleUtil" />
         <variable
             name="clickListener"
             type="android.view.View.OnClickListener"/>
@@ -34,7 +34,7 @@
             type="String"/>
         <variable
             name="checkInItem"
-            type="com.headuck.app.gooutwithduck.data.CheckInUiModel.CheckInItem"/>
+            type="com.bus.app.backhomeduck5duck.data.CheckInUiModel.CheckInItem"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

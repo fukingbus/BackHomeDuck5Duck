@@ -29,9 +29,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/main_header_height"
         android:background="?attr/colorPrimary"
-        app:layout_behavior="com.headuck.app.gooutwithduck.views.AppBarBehavior">
+        app:layout_behavior="com.bus.app.backhomeduck5duck.views.AppBarBehavior">
 
-        <com.headuck.app.gooutwithduck.views.MotionToolbar
+        <com.bus.app.backhomeduck5duck.views.MotionToolbar
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:minHeight="?attr/actionBarSize"
@@ -82,7 +82,7 @@
                 app:layout_constraintGuide_end="?attr/actionBarSize" />
 
 
-            <com.headuck.app.gooutwithduck.views.MaskedCardView
+            <com.bus.app.backhomeduck5duck.views.MaskedCardView
                 android:id="@+id/main_bar_white_decor"
                 style="@style/CardView.MainBackground"
                 android:layout_width="match_parent"
@@ -192,7 +192,7 @@
                 tools:text="Record places visited" />
 
 
-        </com.headuck.app.gooutwithduck.views.MotionToolbar>
+        </com.bus.app.backhomeduck5duck.views.MotionToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 </layout>

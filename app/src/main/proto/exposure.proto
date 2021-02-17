@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package com.headuck.app.gooutwithduck.proto;
+package com.bus.app.backhomeduck5duck.proto;
 
 message ExposureKeyExport {
     optional fixed64 startTs = 1;
